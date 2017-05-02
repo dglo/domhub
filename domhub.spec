@@ -41,6 +41,8 @@ rm -rf %{buildroot}
 %files
 %attr(777, -, -) %dir /usr/local/i3/domhub/dropbox
 %attr(777, -, -) %dir /usr/local/i3/domhub/results
+%attr(666, -, -) /usr/local/i3/domhub/config/domhubConfig.dat
+%attr(666, -, -) /usr/local/i3/domhub/config/domhubExclude.txt
 /usr/local/i3/domhub
 
 %changelog
