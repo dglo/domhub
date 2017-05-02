@@ -3,7 +3,7 @@
 %define          debug_package %{nil}
 %define        __os_install_post %{_dbpath}/brp-compress
 
-Summary: DOMHub central controls cripts
+Summary: DOMHub central control scripts
 Name: domhub
 # Don't need to update this version, Makefile will do it
 Version: 1.0
@@ -38,8 +38,9 @@ rm -rf %{buildroot}
 
 %files
 #%defattr(-, pdaq, pdaq, -)
-%attr(777, -, -) %dir dropbox/tape
-%attr(777, -, -) %dir dropbox/satellite-only/high-priority
+%attr(777, -, -) %dir /usr/local/pdaq/domhub/dropbox/tape
+%attr(777, -, -) %dir /usr/local/pdaq/domhub/dropbox/satellite-only/high-priority
+/usr/local/pdaq/domhub
 
 %changelog
 * Tue May 2 2017 John Kelley <jkelley@icecube.wisc.edu>

@@ -8,7 +8,7 @@ ARCH=noarch
 RPM=$(RPMDIR)/RPMS/$(ARCH)/$(SRT)-1.$(ARCH).rpm
 
 SPEC=domhub-$(REL).spec
-SUBDIRS=mnt
+SUBDIRS=bin config dropbox lib results
 
 # Version control directories to exclude
 VCS=.svn
