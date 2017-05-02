@@ -465,7 +465,7 @@ sub getDomcal {
     #	system("rm -rf /tmp/current/current.*");
     foreach my $domhub (@domhubs) {
 	print "getting domcal files for $domhub \n";
-	system("mkdir -p $SCRIPTDIR/domcal/$domhub/");        
+	system("mkdir -p $resultsDir/domcal/$domhub/");        
 	system("scp -p testdaq\@$domhub:~/domcal/domcal* $resultsDir/domcal/$domhub");
 	print "\n";
     }
