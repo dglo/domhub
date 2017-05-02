@@ -28,19 +28,20 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %install
 rm -rf %{buildroot}
-mkdir -p  %{buildroot}/usr/local/pdaq/domhub
+mkdir -p %{buildroot}/usr/local/i3/domhub
+mkdir -p %{buildroot}/usr/local/i3/domhub/dropbox
+mkdir -p %{buildroot}/usr/local/i3/domhub/results
 
 # in builddir
-cp -a * %{buildroot}/usr/local/pdaq/domhub
+cp -a * %{buildroot}/usr/local/i3/domhub
 
 %clean
 rm -rf %{buildroot}
 
 %files
-#%defattr(-, pdaq, pdaq, -)
-%attr(777, -, -) %dir /usr/local/pdaq/domhub/dropbox/tape
-%attr(777, -, -) %dir /usr/local/pdaq/domhub/dropbox/satellite-only/high-priority
-/usr/local/pdaq/domhub
+%attr(777, -, -) %dir /usr/local/i3/domhub/dropbox
+%attr(777, -, -) %dir /usr/local/i3/domhub/results
+/usr/local/i3/domhub
 
 %changelog
 * Tue May 2 2017 John Kelley <jkelley@icecube.wisc.edu>
