@@ -6,7 +6,7 @@
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Keep the trailing /, please
-uploadDir="$SCRIPTDIR/../dropbox/satellite-only/high-priority/"
+uploadDir="$SCRIPTDIR/../dropbox/"
 
 # Hacky, I know.  The data we want to tar+upload is in
 # ./$resultsDir/$idomSubdir/*, but we want the tar file to unpack it into

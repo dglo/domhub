@@ -15,7 +15,7 @@ fi
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Keep the trailing /, please
-uploadDir="$SCRIPTDIR/../dropbox/satellite-only/high-priority/"
+uploadDir="$SCRIPTDIR/../dropbox/"
 
 calSection=$1
 resultsDir="$SCRIPTDIR/../results/"
