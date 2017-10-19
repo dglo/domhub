@@ -23,7 +23,7 @@ domcalOrigDir="domcal"
 domcalName="domcal-`date +%Y%m%d`-$calSection-unvetted"
 
 SENDMAIL=/usr/sbin/sendmail
-email_recipients=blaufuss@icecube.umd.edu,john.kelley@icecube.wisc.edu,tomas.j.palczewski@ua.edu,icecube@icecube.usap.gov
+email_recipients=blaufuss@icecube.umd.edu,john.kelley@icecube.wisc.edu,mkauer@icecube.wisc.edu,pnakarmi@crimson.ua.edu,icecube@icecube.usap.gov
 
 if [ -e $resultsDir$domcalOrigDir ]
 then
