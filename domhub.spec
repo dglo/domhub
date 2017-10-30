@@ -46,5 +46,7 @@ rm -rf %{buildroot}
 /usr/local/i3/domhub
 
 %changelog
+* Mon Oct 30 2017 John Kelley <jkelley@icecube.wisc.edu>
+Fix email temp directory, update email list
 * Tue May 2 2017 John Kelley <jkelley@icecube.wisc.edu>
 Initial version moved and reorganized from testdaq-user RPM.

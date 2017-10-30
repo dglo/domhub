@@ -13,6 +13,7 @@ then
 fi
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+TMPDIR="/tmp"
 
 # Keep the trailing /, please
 uploadDir="$SCRIPTDIR/../dropbox/"
@@ -44,11 +45,11 @@ then
     echo "JADE picked up the DOMCal files."
     echo "Emailing folks to let them know."
     temp_email_file=tempemailfile`date '+%Y%m%d%H%M%S'`.txt
+    temp_email_file="${TMPDIR}/${temp_email_file}"
     echo "Subject: $domcalName uploaded via SPADE" > $temp_email_file
     echo "" >> $temp_email_file
     echo "This is an automated message, email the winterovers at icecube@icecube.usap.gov with any questions" >> $temp_email_file
-    # TEMP FIX ME
-    #cat $temp_email_file | $SENDMAIL $email_recipients
+    cat $temp_email_file | $SENDMAIL $email_recipients
     rm $temp_email_file
 
   fi
