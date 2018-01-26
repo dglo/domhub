@@ -12,7 +12,7 @@
 # to the user on the remote string-proc.
 #
 
-my $VERSION = '15.0';
+my $VERSION = '15.1';
 
 use File::Basename;
 use File::Spec;
@@ -977,7 +977,7 @@ sub confirm {
     where the list is that status of all the cards (idecating
     missing cards with a " ") and the first of the list is
     the domhub name (in full: ex. sps-ithub01)
-    =cut
+=cut
 
 sub getCardList {
     my @domhubs    = @_;
@@ -1013,8 +1013,8 @@ sub getCardList {
     takes a list of DOMHubs (ex. sps-ithub01 ...) and reports
     to the terminal the status of all the cards on all the given
     domhubs. This processes is threaded.
-Note: this sub will request a confirmation form the user.
-    =cut
+    Note: this sub will request a confirmation form the user.
+=cut
 
 sub checkGPS {
     my @domhubs = @_;
@@ -1054,7 +1054,7 @@ sub checkGPS {
 =printKey
     prints the key to the table...
     does nothing else...
-    =cut
+=cut
 
 sub printKey {
 
