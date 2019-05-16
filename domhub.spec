@@ -46,6 +46,8 @@ rm -rf %{buildroot}
 /usr/local/i3/domhub
 
 %changelog
+* Thu May 16 2019 John Kelley <jkelley@icecube.wisc.edu>
+Add idom_softboot.sh
 * Mon Oct 30 2017 John Kelley <jkelley@icecube.wisc.edu>
 Fix email temp directory, update email list
 * Tue May 2 2017 John Kelley <jkelley@icecube.wisc.edu>
