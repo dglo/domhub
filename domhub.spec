@@ -46,6 +46,9 @@ rm -rf %{buildroot}
 /usr/local/i3/domhub
 
 %changelog
+* Mon Nov 11 2019 John Kelley <jkelley@icecube.wisc.edu>
+Print normal usage if run with no args
+Remove many old domhub groups
 * Thu May 16 2019 John Kelley <jkelley@icecube.wisc.edu>
 Add idom_softboot.sh
 * Mon Oct 30 2017 John Kelley <jkelley@icecube.wisc.edu>
