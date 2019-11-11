@@ -4,15 +4,18 @@
 # vbittorf@icecube.wisc.edu
 # krasberg@icecube.wisc.edu
 #
+# Maintained by John Kelley
+# jkelley@icecube.wisc.edu
+#
 # domhub
-# the basic domhub untility!
+# the basic domhub utility!
 #
 # This program is used to run commands on DOMHubs
 # remotely. The result of the command is returned
 # to the user on the remote string-proc.
 #
 
-my $VERSION = '15.1';
+my $VERSION = '15.2';
 
 use File::Basename;
 use File::Spec;
@@ -99,15 +102,19 @@ our @commdoms = ();
 
 loadExcludes();
 
-if ( defined $ARGV[0] ) { $hubs    = $ARGV[0]; }
-if ( defined $ARGV[1] ) { $command = $ARGV[1]; }
+if ( defined $ARGV[0] ) { 
+    $hubs    = $ARGV[0]; 
+}
 else {
-    if ( $hubs eq "table" || $hubs eq "status" ) {
-	$hubs = "all";
-    }
-    if ( $commdoms[$hubs] < 10 ) {
-	$command = "table";
-    }
+    print "Usage: domhub <hubs> <command>\n";
+    exit(0);
+}
+if ( defined $ARGV[1] ) { 
+    $command = $ARGV[1];
+}
+else {
+    print "Usage: domhub <hub/hubset> <command>\n";
+    exit(0);
 }
 
 if ( defined $ARGV[2] && !($ARGV[1] eq "distribute" || $ARGV[1] eq "getfile")) {
@@ -115,7 +122,7 @@ if ( defined $ARGV[2] && !($ARGV[1] eq "distribute" || $ARGV[1] eq "getfile")) {
     print " too many arguments!!!! \n";
     print " \n put command line arguments inside quotes\n";
     print " eg: domhub all \"versions all\"\n\n";
-    exit(1);
+    exit(0);
 }
 
 my %Completed_Threads : shared = ();
